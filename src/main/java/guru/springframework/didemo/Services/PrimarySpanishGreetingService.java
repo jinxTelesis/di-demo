@@ -5,18 +5,18 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 @Service
-@Primary
-@Profile({"en", "default"}) // no profile or en
-public class PrimaryGreetingService implements GreetingService {
+@Profile("es")
+@Primary // ignore the primary unless the profile is active
+public class PrimarySpanishGreetingService implements GreetingService {
 
     private GreetingRepository greetingRepository;
 
-    public PrimaryGreetingService(GreetingRepository greetingRepository) {
+    public PrimarySpanishGreetingService(GreetingRepository greetingRepository) {
         this.greetingRepository = greetingRepository;
     }
 
     @Override
     public String sayGreeting() {
-        return "Hello - Primary Greeting service";
+        return "Service de Saludo Primario";
     }
 }
