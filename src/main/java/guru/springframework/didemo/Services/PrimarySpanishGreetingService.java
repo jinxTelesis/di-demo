@@ -4,9 +4,9 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
-@Service
-@Profile("es")
-@Primary // ignore the primary unless the profile is active
+//@Service changed the spring config
+//@Profile("es")
+//@Primary // ignore the primary unless the profile is active
 public class PrimarySpanishGreetingService implements GreetingService {
 
     private GreetingRepository greetingRepository;
