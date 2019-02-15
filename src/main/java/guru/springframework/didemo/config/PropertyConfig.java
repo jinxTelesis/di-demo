@@ -9,8 +9,13 @@ import org.springframework.context.annotation.*;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
 @Configuration
-@PropertySource("classpath:datasource.properties") //
-@PropertySource("classpath:jms.properties")
+//@PropertySource("classpath:datasource.properties") // left in as examples
+//@PropertySource("classpath:jms.properties")
+
+//@PropertySources({ // another example
+//        @PropertySource("classpath:datasource.properties"),
+//        @PropertySource(("classpath:jms.properties"))
+//})
 public class PropertyConfig {
 
     // matches property values in the resources/datasource.properties file == allows value configuration
@@ -57,11 +62,13 @@ public class PropertyConfig {
         jmsBroker.setUrl(jmsUrl);
         return jmsBroker;
     }
-    @Bean
-    public static PropertySourcesPlaceholderConfigurer properties(){
-        PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer = new
-                PropertySourcesPlaceholderConfigurer();
-        return propertySourcesPlaceholderConfigurer;
-    }
+
+
+//    @Bean // == this is used with the none default property files
+//    public static PropertySourcesPlaceholderConfigurer properties(){
+//        PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer = new
+//                PropertySourcesPlaceholderConfigurer();
+//        return propertySourcesPlaceholderConfigurer;
+//    }
 
 }
