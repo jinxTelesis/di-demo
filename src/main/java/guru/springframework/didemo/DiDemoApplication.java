@@ -5,6 +5,7 @@ import guru.springframework.didemo.controllers.GetterInjectedController;
 import guru.springframework.didemo.controllers.MyController;
 import guru.springframework.didemo.controllers.PropertyInjectedController;
 import guru.springframework.didemo.examplebeans.FakeDataSource;
+import guru.springframework.didemo.examplebeans.FakeJmsBroker;
 import jdk.nashorn.internal.objects.annotations.Constructor;
 import org.omg.Messaging.SYNC_WITH_TRANSPORT;
 import org.springframework.boot.SpringApplication;
@@ -27,6 +28,9 @@ public class DiDemoApplication {
         //System.out.println(ctx.getBean(ConstructorInjectedController.class).sayHello());
 
         //FakeDataSource fakeDataSource = (FakeDataSource) ctx.getBean()
+
+        FakeJmsBroker fakeJmsBroker = (FakeJmsBroker) ctx.getBean(FakeJmsBroker.class);
+
     }
 
 }
