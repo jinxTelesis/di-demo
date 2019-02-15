@@ -64,7 +64,7 @@ public class PropertyConfig {
     }
 
 
-//    @Bean // == this is used with the none default property files
+//    @Bean //+  == this is used with the none default property files
 //    public static PropertySourcesPlaceholderConfigurer properties(){
 //        PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer = new
 //                PropertySourcesPlaceholderConfigurer();
