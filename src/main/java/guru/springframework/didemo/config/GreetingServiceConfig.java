@@ -31,7 +31,7 @@ public class GreetingServiceConfig {
     {
         return greetingServiceFactory.createGreetingService("es");
     }
-    
+
     @Bean
     @Primary
     @Profile("de")
